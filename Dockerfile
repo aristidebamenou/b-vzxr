@@ -1,9 +1,9 @@
-FROM    alpine:3.12.0
+FROM    debian:buster-slim
 
 WORKDIR ./workshop
 
 RUN     apt-get update && \
-        apt-get upgrade && \
-        apt-get install git && \
-        apt-get install python && \
-        apt-get clone git@github.com:aristidebamenou/b-vzxr.git
+        apt-get upgrade -y && \
+        apt-get install -y git && \
+        apt-get install -y python && \
+        git clone https://github.com/aristidebamenou/b-vzxr.git
